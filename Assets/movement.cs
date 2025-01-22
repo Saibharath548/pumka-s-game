@@ -7,7 +7,8 @@ public class movement : MonoBehaviour
 {
     public InputAction Playercon;
     private Rigidbody2D rb;
-
+    public Animator Ani;
+    private SpriteRenderer SR;
     [SerializeField]private float speed;
     Vector2 moveDirection = Vector2.zero;
 
@@ -18,6 +19,8 @@ public class movement : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        Ani = GetComponent<Animator>();
+        SR = GetComponent<SpriteRenderer>();
     }
     private void OnEnable()
     {
@@ -37,7 +40,15 @@ public class movement : MonoBehaviour
     void Update()
     {
         moveDirection = Playercon.ReadValue<Vector2>();
-
+        Ani.SetFloat("Movement", moveDirection.sqrMagnitude);
+        if (moveDirection.x > 0)
+        {
+            SR.flipX = true;
+        }
+        else if (moveDirection.x < 0)
+        {
+            SR.flipX = false;
+        }
     }
 
     private void FixedUpdate()

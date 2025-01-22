@@ -383,7 +383,7 @@ TextureImporter:
         width: 48
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -391,6 +391,111 @@ TextureImporter:
       bones: []
       spriteID: 9aa2276bdb723ea41bb89c5d45248722
       internalID: -1568737743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Animator vs Animation Game - Animation-export_13
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 4465
+        width: 67
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc2115b2c5f5c2499e537be10950b9c
+      internalID: -1370010901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Animator vs Animation Game - Animation-export_14
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 4470
+        width: 56
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc71413e14bf3044826019a7a3e17de
+      internalID: -1251451748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Animator vs Animation Game - Animation-export_15
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 4468
+        width: 57
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df88532275a72444589f225a81770247
+      internalID: 791843343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Animator vs Animation Game - Animation-export_16
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 4470
+        width: 61
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c668314a567c8244683a04eb8cad9c55
+      internalID: 1604748335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Browser Games - Animator vs Animation Game - Animation-export_17
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 4472
+        width: 68
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d78556974d808c549b21f21e94a11d92
+      internalID: 1217109017
       vertices: []
       indices: 
       edges: []
@@ -411,6 +516,11 @@ TextureImporter:
       Browser Games - Animator vs Animation Game - Animation-export_10: 1457650088
       Browser Games - Animator vs Animation Game - Animation-export_11: 394667618
       Browser Games - Animator vs Animation Game - Animation-export_12: -1568737743
+      Browser Games - Animator vs Animation Game - Animation-export_13: -1370010901
+      Browser Games - Animator vs Animation Game - Animation-export_14: -1251451748
+      Browser Games - Animator vs Animation Game - Animation-export_15: 791843343
+      Browser Games - Animator vs Animation Game - Animation-export_16: 1604748335
+      Browser Games - Animator vs Animation Game - Animation-export_17: 1217109017
       Browser Games - Animator vs Animation Game - Animation-export_2: 1641838401
       Browser Games - Animator vs Animation Game - Animation-export_3: 390471354
       Browser Games - Animator vs Animation Game - Animation-export_4: 578614938
