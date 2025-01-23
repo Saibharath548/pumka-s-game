@@ -42,7 +42,7 @@ public class bubble : MonoBehaviour
             rb2.gravityScale = 0;
             Box.bodyType = RigidbodyType2D.Dynamic;
             Box.gravityScale = .15f;
-            BG.SetActive(true);
+            //BG.SetActive(true);
         }
         if (collision.CompareTag("spike"))
         {

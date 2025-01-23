@@ -8,6 +8,7 @@ public class ai : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //aiMove();
         //T = GetComponent<Transform>();
     }
 
@@ -29,8 +30,8 @@ public class ai : MonoBehaviour
 
     private void aiMove()
     {
-        Vector3 direction = P.position - transform.TransformPoint(T.position);
-        T.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(direction.y,-direction.x) * Mathf.Rad2Deg + 90));
+        Vector3 direction = P.position - T.position;
+        T.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(-direction.y,-direction.x) * Mathf.Rad2Deg));
         //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
     }
     //private void OnTriggerStay2D(Collider2D collision)
