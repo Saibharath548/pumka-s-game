@@ -27,7 +27,7 @@ public class background : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        spawnV = new Vector3(Random.Range(-5, 5), 7, 0);
+        spawnV = new Vector3(Random.Range(-3, 3), 7, 0);
         spawnLoop();
        // sR.sprite = sp[Random.Range(0, sp.Length)];
 
