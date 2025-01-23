@@ -7,10 +7,13 @@ public class bubble : MonoBehaviour
     private Transform T1;
     public Rigidbody2D Box;
     Rigidbody2D rb2;
+    public GameObject BG;
     bool inC;
+    public Animator Ani;
     // Start is called before the first frame update
     private void Awake()
     {
+        Ani = GetComponent<Animator>();
         rb2 = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
     }
     void Start()
@@ -35,10 +38,16 @@ public class bubble : MonoBehaviour
         {
             inC = true;
             movement.instance.transform.position = T1.position;
-            transform.SetParent(movement.instance.transform);
+            //transform.SetParent(movement.instance.transform);
             rb2.gravityScale = 0;
             Box.bodyType = RigidbodyType2D.Dynamic;
             Box.gravityScale = .15f;
+            BG.SetActive(true);
+        }
+        if (collision.CompareTag("spike"))
+        {
+            Ani.SetBool("Break", true);
+            Destroy(this, 10);
         }
     }
 }
