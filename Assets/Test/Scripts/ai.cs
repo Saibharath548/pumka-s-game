@@ -14,25 +14,24 @@ public class ai : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (pR)
+        {
+            aiMove();
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        pR = true;
-        if (pR = true)
+        if (collision.CompareTag("player"))
         {
-            if (collision.CompareTag("player"))
-            {
-                aiMove();
-            }
+            pR = true;
         }
     }
 
     private void aiMove()
     {
         Vector3 direction = P.position - transform.TransformPoint(T.position);
-        T.localRotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(direction.y,direction.x) * Mathf.Rad2Deg));
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        T.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(direction.y,-direction.x) * Mathf.Rad2Deg + 90));
+        //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
     }
     //private void OnTriggerStay2D(Collider2D collision)
     //{
@@ -49,13 +48,9 @@ public class ai : MonoBehaviour
     //}
     private void OnTriggerExit2D(Collider2D collision)
     {
-        pR=false;
-        if(pR = true)
+        if (collision.CompareTag("player"))
         {
-            if(collision.CompareTag("player"))
-            {
-                aiMove();
-            }
+            pR = false;
         }
     }
 
