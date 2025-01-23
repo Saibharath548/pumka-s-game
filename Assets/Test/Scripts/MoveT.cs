@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class MoveT : MonoBehaviour
 {
+    public static MoveT instance;
+    private Transform T1;
+    
     private Rigidbody2D rb;
 
     private float xInput;
@@ -14,9 +17,10 @@ public class MoveT : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        T1 = GetComponent<Transform>();  
     }
 
-    // Update is called once per frame
+    // Update is called once per frame  
     void Update()
     {
         xInput = Input.GetAxisRaw("Horizontal");
