@@ -8,6 +8,7 @@ TagManager:
   - hard
   - player
   - ai
+  - bullet
   layers:
   - Default
   - TransparentFX

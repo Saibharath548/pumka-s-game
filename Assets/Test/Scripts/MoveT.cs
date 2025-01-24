@@ -37,6 +37,10 @@ public class MoveT : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        if (collision.CompareTag("bullet"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
     
 }

@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 7072904588350625965}
   - component: {fileID: 5467147670688783118}
   m_Layer: 0
-  m_Name: AI
+  m_Name: ai
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -245,6 +245,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   T: {fileID: 8675504120841544201}
   T1: {fileID: 8548829333112451455}
+  BubbleBullet: {fileID: 3479750909645620935, guid: 59d18f8b57b61394b8c9a95913b519ba, type: 3}
+  BulletSpeed: 10
   CDistance: 0.1
 --- !u!61 &5467147670688783118
 BoxCollider2D:

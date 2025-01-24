@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ai : MonoBehaviour
@@ -8,6 +10,8 @@ public class ai : MonoBehaviour
     [SerializeField] private float BulletSpeed;
     [SerializeField]private float CDistance;
     private bool pR = false;
+    private bool shoot = true;
+    private Vector3 direction;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,17 +46,27 @@ public class ai : MonoBehaviour
     private void aiMove()
     {
 
-        Vector3 direction = movement.instance.transform.position - T.position;
+        Vector3 direction = MoveT.instance.transform.position - T.position;
 
         T.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg));
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         T.position = T1.position + Quaternion.Euler(0, 0, angle) * new Vector3(CDistance, 0, 0);
+
+        if(shoot)
+        StartCoroutine(yeahSo());
+
+    }
+    IEnumerator yeahSo()
+    {
+        shoot = false;
+        yield return new WaitForSeconds(1);
 
         GameObject BB = Instantiate(BubbleBullet, T.position, Quaternion.identity);
 
         BB.GetComponent<Rigidbody2D>().velocity = direction.normalized * BulletSpeed;
 
         Destroy(BB, 7);
+        shoot = true;
     }
     //private void OnTriggerStay2D(Collider2D collision)
     //{
