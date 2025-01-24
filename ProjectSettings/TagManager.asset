@@ -11,6 +11,7 @@ TagManager:
   - bullet
   - Bubble
   - Fuel
+  - Super
   layers:
   - Default
   - TransparentFX
