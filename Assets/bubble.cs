@@ -30,6 +30,12 @@ public class bubble : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Fuel < 0)
+        {
+            Move = false;
+            GameManager.Broke = true;
+            Ani.SetTrigger("Break");
+        }
         if (Input.GetKeyDown(KeyCode.Mouse1) && Hard > 0)
         {
             StartCoroutine(HardTimer());
@@ -69,34 +75,37 @@ public class bubble : MonoBehaviour
             Move = false;
             GameManager.Broke = true;
             Ani.SetTrigger("Break");
-            Destroy(this, 1);
+        }
+        else if (collision.CompareTag("Bullet"))
+        {
+            if (HardMode)
+            {
+                Destroy(collision.gameObject);
+            }
+            else
+            {
+                Move = false;
+                GameManager.Broke = true;
+                Ani.SetTrigger("Break");
+            }
         }
         else if (collision.CompareTag("Fuel"))
         {
+            Destroy(collision.gameObject);
             Fuel++;
         }
         else if (collision.CompareTag("hard"))
         {
-            if(Hard < 1)
-            {
-                GameManager.Broke = true;
-                Ani.SetTrigger("Break");
-                Destroy(this, 1);
-            }
+            Destroy(collision.gameObject);
             Hard++;
         }
     }
     IEnumerator FuelTimer()
     {
         yield return new WaitForSeconds(15);
-        if(Fuel > 0)
+        if(Fuel >= 0)
         {
             Fuel--;
-        }
-        else
-        {
-            GameManager.Broke = true;
-            Destroy(this, 1);
         }
     }
     IEnumerator HardTimer()
@@ -105,5 +114,9 @@ public class bubble : MonoBehaviour
         yield return new WaitForSeconds(5);
         Hard--;
         HardMode = false;
+    }
+    public void Des()
+    {
+        Destroy(gameObject, 1);
     }
 }

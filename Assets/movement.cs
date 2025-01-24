@@ -54,6 +54,7 @@ public class movement : MonoBehaviour
 
         if (GameManager.Broke)
         {
+            Debug.Log("Broke");
             Ani.SetBool("Broke", true);
             rb.gravityScale = .5f;   
         }

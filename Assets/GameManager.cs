@@ -44,4 +44,11 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(.75f);
         P.SetActive(true);
     }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Clone"))
+        {
+            Destroy(collision.gameObject);
+        }
+    }
 }

@@ -9,6 +9,7 @@ public class cloud : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Speed = Random.Range(1f, 3f);
         transform.localScale = Vector3.one * Speed / 4;
         T = GetComponent<Transform>();
     }
