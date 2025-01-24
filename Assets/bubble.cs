@@ -13,7 +13,8 @@ public class bubble : MonoBehaviour
     public static bubble instance;
     public Animator Ani;
     public static int Fuel = 1;
-    public static int Hard = 1;
+    public static int Hard = 3;
+    private bool HardMode = false;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -29,7 +30,19 @@ public class bubble : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(inC)
+        if (Input.GetKeyDown(KeyCode.Mouse1) && Hard > 0)
+        {
+            StartCoroutine(HardTimer());
+        }
+        if (HardMode && Move)
+        {
+            Ani.SetBool("Hard", true);
+        }
+        else
+        {
+            Ani.SetBool("Hard", false);
+        }
+        if (inC)
         {
             //transform.position += new Vector3(0, 1, 0) * Time.deltaTime;
             //transform.localScale -= new Vector3(.1f, .1f, 0) * Time.deltaTime;
@@ -62,6 +75,16 @@ public class bubble : MonoBehaviour
         {
             Fuel++;
         }
+        else if (collision.CompareTag("hard"))
+        {
+            if(Hard < 1)
+            {
+                GameManager.Broke = true;
+                Ani.SetTrigger("Break");
+                Destroy(this, 1);
+            }
+            Hard++;
+        }
     }
     IEnumerator FuelTimer()
     {
@@ -73,8 +96,14 @@ public class bubble : MonoBehaviour
         else
         {
             GameManager.Broke = true;
-            Ani.SetTrigger("Break");
             Destroy(this, 1);
         }
+    }
+    IEnumerator HardTimer()
+    {
+        HardMode = true;
+        yield return new WaitForSeconds(5);
+        Hard--;
+        HardMode = false;
     }
 }
