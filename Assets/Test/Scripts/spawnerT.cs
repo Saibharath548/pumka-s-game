@@ -9,7 +9,7 @@ public class spawnerT : MonoBehaviour
     [SerializeField] private float PlatspawnTime;
 
     [SerializeField] private float timeuntilSpawn;
-    [SerializeField] private float obstacleSpeed;
+    public static float obstacleSpeed;
 
     private Vector3 spawnV;
     private Transform spawnT;
@@ -24,11 +24,14 @@ public class spawnerT : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (bubble.Move)
-        {
-            spawnV = new Vector3(Random.Range(-2, 2), 7, 0);
-            spawnLoop();
-        }
+        spawnV = new Vector3(Random.Range(-2, 2), 7, 0);
+        spawnLoop();
+
+        //if (bubble.Move)
+        //{
+        //    spawnV = new Vector3(Random.Range(-2, 2), 7, 0);
+        //    spawnLoop();
+        //}
         //sR.sprite = sp[Random.Range(0, sp.Length)];
         
     }

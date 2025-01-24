@@ -5,7 +5,7 @@ using UnityEngine;
 public class cloud : MonoBehaviour
 {
     private Transform T;
-    public float Speed;
+    public static float Speed;
     // Start is called before the first frame update
     void Start()
     {

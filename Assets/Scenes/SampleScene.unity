@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &49370944
 Transform:
   m_ObjectHideFlags: 0
@@ -173,7 +173,6 @@ MonoBehaviour:
   - {fileID: 4279286529285041010, guid: 314ac1311f1b9e74e8a5c55a4b9ccdf8, type: 3}
   PlatspawnTime: 1
   timeuntilSpawn: 6
-  obstacleSpeed: 1
 --- !u!50 &49370946
 Rigidbody2D:
   serializedVersion: 4
@@ -764,7 +763,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 817c9fa1a45e7f0439bb020912a69c12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0
 --- !u!1 &873162950
 GameObject:
   m_ObjectHideFlags: 0
@@ -1098,7 +1096,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 817c9fa1a45e7f0439bb020912a69c12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0
 --- !u!1 &1028651365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1264,7 +1261,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 817c9fa1a45e7f0439bb020912a69c12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0
 --- !u!1 &1065023187
 GameObject:
   m_ObjectHideFlags: 0
@@ -2051,7 +2047,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 817c9fa1a45e7f0439bb020912a69c12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0
 --- !u!1 &1857651717
 GameObject:
   m_ObjectHideFlags: 0
@@ -2500,6 +2495,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9045287584851109679, guid: 8804cb9eb1f24b3478adf5b6e5b1d494, type: 3}
+      propertyPath: Hard
+      value: 
+      objectReference: {fileID: 1813185757, guid: 7b18ba23914d765458524f6b5caf019f, type: 3}
+    - target: {fileID: 9045287584851109679, guid: 8804cb9eb1f24b3478adf5b6e5b1d494, type: 3}
+      propertyPath: HardD
+      value: 
+      objectReference: {fileID: -404859335, guid: 7b18ba23914d765458524f6b5caf019f, type: 3}
+    - target: {fileID: 9045287584851109679, guid: 8804cb9eb1f24b3478adf5b6e5b1d494, type: 3}
+      propertyPath: HardS
+      value: 
+      objectReference: {fileID: 1813185757, guid: 7b18ba23914d765458524f6b5caf019f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
