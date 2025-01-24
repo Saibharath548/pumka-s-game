@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject ScoreUI;
     public VideoPlayer Player;
     public GameObject P;
-    private float Timer = 0;
+    private float Score = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        while (bubble.Move)
+        {
+            Score += 1 * Time.time;
+            Debug.Log(Score);
+        }
     }
     public void ShowUI()
     {
