@@ -9,6 +9,8 @@ TagManager:
   - player
   - ai
   - bullet
+  - Bubble
+  - Fuel
   layers:
   - Default
   - TransparentFX

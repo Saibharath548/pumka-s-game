@@ -10,9 +10,9 @@ public class bullet : MonoBehaviour
     {
         if (MoveT.Harden == false)
         {
-            if (collision.CompareTag("Player"))
+            if (collision.CompareTag("Bubble"))
             {
-                Destroy(collision.gameObject);
+                GameManager.Broke = true;
             }
         }
     }

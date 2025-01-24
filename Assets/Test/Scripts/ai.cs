@@ -40,7 +40,7 @@ public class ai : MonoBehaviour
     private void aiMove()
     {
 
-        direction = MoveT.instance.transform.position - T.position;
+        direction = movement.instance.transform.position - T.position;
 
         T.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg));
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

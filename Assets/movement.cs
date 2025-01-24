@@ -61,7 +61,14 @@ public class movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(moveDirection.x*speed, rb.velocity.y);
+        if (bubble.Move)
+        {
+            rb.velocity = new Vector2(moveDirection.x * speed, moveDirection.y * speed);
+        }
+        else
+        {
+            rb.velocity = new Vector2(moveDirection.x * speed, rb.velocity.y);
+        }
         
     }
 

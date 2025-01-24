@@ -12,6 +12,8 @@ public class bubble : MonoBehaviour
     public static bool Move;
     public static bubble instance;
     public Animator Ani;
+    public static int Fuel = 1;
+    public static int Hard = 1;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -32,6 +34,7 @@ public class bubble : MonoBehaviour
             //transform.position += new Vector3(0, 1, 0) * Time.deltaTime;
             //transform.localScale -= new Vector3(.1f, .1f, 0) * Time.deltaTime;
             transform.position = Player.transform.position;
+            StartCoroutine(FuelTimer());
         }
 
     }
@@ -55,9 +58,23 @@ public class bubble : MonoBehaviour
             Ani.SetTrigger("Break");
             Destroy(this, 1);
         }
+        else if (collision.CompareTag("Fuel"))
+        {
+            Fuel++;
+        }
     }
-    private void getBool()
+    IEnumerator FuelTimer()
     {
-
+        yield return new WaitForSeconds(15);
+        if(Fuel > 0)
+        {
+            Fuel--;
+        }
+        else
+        {
+            GameManager.Broke = true;
+            Ani.SetTrigger("Break");
+            Destroy(this, 1);
+        }
     }
 }

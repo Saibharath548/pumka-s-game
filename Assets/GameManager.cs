@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public GameObject P;
     private int Score ;
     public TextMeshProUGUI ScoreO;
-    public GameObject AI;
+    public TextMeshProUGUI UI;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,12 +27,12 @@ public class GameManager : MonoBehaviour
     {
         if (bubble.Move)
         {
-            AI.SetActive(true);
             Clouds.SetActive(true);
             Score += ((int)Time.time) / 2;
             ScoreO.text = Score.ToString();
             Debug.Log(Score);
         }
+        UI.text = (bubble.Fuel.ToString() + "\n" + "  " + bubble.Hard.ToString());
     }
     public void ShowUI()
     {
