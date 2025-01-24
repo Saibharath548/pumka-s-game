@@ -245,7 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   T: {fileID: 8675504120841544201}
   T1: {fileID: 8548829333112451455}
-  CDistance: 0
+  CDistance: 0.1
 --- !u!61 &5467147670688783118
 BoxCollider2D:
   m_ObjectHideFlags: 0
