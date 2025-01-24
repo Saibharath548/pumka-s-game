@@ -24,8 +24,11 @@ public class spawnerT : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        spawnV = new Vector3(Random.Range(-2, 2), 7, 0);
-        spawnLoop();
+        if (bubble.Move)
+        {
+            spawnV = new Vector3(Random.Range(-2, 2), 7, 0);
+            spawnLoop();
+        }
         //sR.sprite = sp[Random.Range(0, sp.Length)];
         
     }
