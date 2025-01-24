@@ -246,6 +246,7 @@ MonoBehaviour:
   P: {fileID: 1082400281851638235, guid: 8804cb9eb1f24b3478adf5b6e5b1d494, type: 3}
   T: {fileID: 3849482749581963112}
   T1: {fileID: 8548829333112451455}
+  CDistance: 1
 --- !u!61 &5467147670688783118
 BoxCollider2D:
   m_ObjectHideFlags: 0
