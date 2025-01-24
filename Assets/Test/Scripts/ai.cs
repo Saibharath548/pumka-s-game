@@ -4,7 +4,8 @@ public class ai : MonoBehaviour
 {
     public Transform T;
     public Transform T1;
-
+    [SerializeField] private GameObject BubbleBullet;
+    [SerializeField] private float BulletSpeed;
     [SerializeField]private float CDistance;
     private bool pR = false;
     // Start is called before the first frame update
@@ -46,6 +47,12 @@ public class ai : MonoBehaviour
         T.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg));
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         T.position = T1.position + Quaternion.Euler(0, 0, angle) * new Vector3(CDistance, 0, 0);
+
+        GameObject BB = Instantiate(BubbleBullet, T.position, Quaternion.identity);
+
+        BB.GetComponent<Rigidbody2D>().velocity = direction.normalized * BulletSpeed;
+
+        Destroy(BB, 7);
     }
     //private void OnTriggerStay2D(Collider2D collision)
     //{
