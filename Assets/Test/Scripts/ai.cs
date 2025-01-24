@@ -25,14 +25,14 @@ public class ai : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D Collision)
     {
-        if (Collision.CompareTag("player"))
+        if (Collision.CompareTag("Player"))
         {
             pR = true;
         }
     }
     private void OnTriggerStay2D(Collider2D Collision)
     {
-        if (Collision.CompareTag("player"))
+        if (Collision.CompareTag("Player"))
         {
             pR = true;
         }
@@ -41,7 +41,7 @@ public class ai : MonoBehaviour
     private void aiMove()
     {
 
-        Vector3 direction = MoveT.instance.transform.position - T.position;
+        Vector3 direction = movement.instance.transform.position - T.position;
 
         T.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg));
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

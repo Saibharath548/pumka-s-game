@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class movement : MonoBehaviour
 {
+    private Transform PlayerPos;
     public InputAction Playercon;
     private Rigidbody2D rb;
     public Animator Ani;
@@ -18,6 +19,7 @@ public class movement : MonoBehaviour
 
     private void Awake()
     {
+        PlayerPos = GetComponent<Transform>();
         instance = this;
         Ani = GetComponent<Animator>();
         SR = GetComponent<SpriteRenderer>();
