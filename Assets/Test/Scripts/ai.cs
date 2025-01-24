@@ -4,6 +4,9 @@ public class ai : MonoBehaviour
 {
     public Transform P;
     public Transform T;
+    public Transform T1;
+
+    [SerializeField]private float CDistance;
     private bool pR = false;
     // Start is called before the first frame update
     void Start()
@@ -30,9 +33,11 @@ public class ai : MonoBehaviour
 
     private void aiMove()
     {
+        
         Vector3 direction = P.position - T.position;
-        T.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(-direction.y,-direction.x) * Mathf.Rad2Deg));
-        //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        T.localRotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(-direction.y,-direction.x) * Mathf.Rad2Deg));
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        T.position = T1.position + Quaternion.Euler(0, 0, angle) * new Vector3(CDistance, 0, 0);
     }
     //private void OnTriggerStay2D(Collider2D collision)
     //{
@@ -51,7 +56,7 @@ public class ai : MonoBehaviour
     {
         if (collision.CompareTag("player"))
         {
-            pR = false;
+            pR = true;
         }
     }
 
