@@ -7,6 +7,7 @@ public class bubble : MonoBehaviour
     private Transform T1;
     public Rigidbody2D Box;
     public Rigidbody2D Player;
+    public CircleCollider2D Bubble;
     public GameObject BG;
     bool inC;
     public static bool Move;
@@ -15,9 +16,11 @@ public class bubble : MonoBehaviour
     public static int Fuel = 1;
     public static int Hard = 3;
     private bool HardMode = false;
+    private bool Super = false;
     // Start is called before the first frame update
     private void Awake()
     {
+        Bubble = GetComponent<CircleCollider2D>();
         instance = this;
         Ani = GetComponent<Animator>();
         //rb2 = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
@@ -55,7 +58,22 @@ public class bubble : MonoBehaviour
             transform.position = Player.transform.position;
             StartCoroutine(FuelTimer());
         }
+        if (Super)
+        {
+            StartCoroutine(speedup());
+        }
+    }
+    IEnumerator speedup()
+    {
 
+        Bubble.enabled = false;
+        spawnerT.obstacleSpeed = 5;
+        cloud.Speed = cloud.Speed * 5;
+        yield return new WaitForSeconds(5);
+        spawnerT.obstacleSpeed = 1;
+        cloud.Speed /= 5;
+        Bubble.enabled = true;
+        Super = false;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -96,13 +114,21 @@ public class bubble : MonoBehaviour
         }
         else if (collision.CompareTag("hard"))
         {
+            if(Hard <= 2)
+            {
+                Destroy(collision.gameObject);
+                Hard++;
+            }
+        }
+        if (collision.CompareTag("Super"))
+        {
+            Super = true;
             Destroy(collision.gameObject);
-            Hard++;
         }
     }
     IEnumerator FuelTimer()
     {
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(30);
         if(Fuel >= 0)
         {
             Fuel--;

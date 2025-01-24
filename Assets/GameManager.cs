@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 {
     public static bool Broke = false;
     public GameObject ScoreUI;
-    public GameObject Clouds;
+    public GameObject[] Set;
     public VideoPlayer Player;
     public GameObject P;
     private int Score ;
@@ -27,7 +27,9 @@ public class GameManager : MonoBehaviour
     {
         if (bubble.Move)
         {
-            Clouds.SetActive(true);
+            Set[0].SetActive(true);
+            Set[1].SetActive(true);
+            Set[2].SetActive(true);
             Score += ((int)Time.time) / 2;
             ScoreO.text = Score.ToString();
             Debug.Log(Score);
