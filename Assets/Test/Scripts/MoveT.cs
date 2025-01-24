@@ -11,11 +11,13 @@ public class MoveT : MonoBehaviour
     
     private Rigidbody2D rb;
 
+
     private float xInput;
     [SerializeField] private float speed;
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         rb = GetComponent<Rigidbody2D>();
         T1 = GetComponent<Transform>();  
     }
@@ -36,4 +38,5 @@ public class MoveT : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    
 }

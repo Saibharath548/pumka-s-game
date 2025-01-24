@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class ai : MonoBehaviour
 {
-    public Transform P;
     public Transform T;
     public Transform T1;
 
@@ -18,14 +17,22 @@ public class ai : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (pR)
         {
             aiMove();
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D Collision)
     {
-        if (collision.CompareTag("player"))
+        if (Collision.CompareTag("player"))
+        {
+            pR = true;
+        }
+    }
+    private void OnTriggerStay2D(Collider2D Collision)
+    {
+        if (Collision.CompareTag("player"))
         {
             pR = true;
         }
@@ -33,9 +40,10 @@ public class ai : MonoBehaviour
 
     private void aiMove()
     {
-        
-        Vector3 direction = P.position - T.position;
-        T.localRotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(-direction.y,-direction.x) * Mathf.Rad2Deg));
+
+        Vector3 direction = MoveT.instance.transform.position - T.position;
+
+        T.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg));
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         T.position = T1.position + Quaternion.Euler(0, 0, angle) * new Vector3(CDistance, 0, 0);
     }
@@ -52,11 +60,11 @@ public class ai : MonoBehaviour
     //        }
     //    }
     //}
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        if (collision.CompareTag("player"))
+        if (other.CompareTag("player"))
         {
-            pR = true;
+            pR = false;
         }
     }
 
