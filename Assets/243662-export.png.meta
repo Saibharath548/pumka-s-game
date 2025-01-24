@@ -328,8 +328,8 @@ TextureImporter:
       name: 243662-export_8
       rect:
         serializedVersion: 2
-        x: 516
-        y: 12
+        x: 424
+        y: 121
         width: 77
         height: 83
       alignment: 0
@@ -349,8 +349,8 @@ TextureImporter:
       name: 243662-export_9
       rect:
         serializedVersion: 2
-        x: 513
-        y: 120
+        x: 516
+        y: 12
         width: 77
         height: 83
       alignment: 0

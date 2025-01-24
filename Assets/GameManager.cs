@@ -10,9 +10,11 @@ public class GameManager : MonoBehaviour
 {
     public static bool Broke = false;
     public GameObject ScoreUI;
+    public GameObject Clouds;
     public VideoPlayer Player;
     public GameObject P;
     private int Score ;
+    public TextMeshProUGUI ScoreO;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,9 @@ public class GameManager : MonoBehaviour
     {
         if (bubble.Move)
         {
-            Score += (int)Time.time;
+            Clouds.SetActive(true);
+            Score += ((int)Time.time) / 2;
+            ScoreO.text = Score.ToString();
             Debug.Log(Score);
         }
     }
