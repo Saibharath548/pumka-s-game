@@ -245,7 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   T: {fileID: 8675504120841544201}
   T1: {fileID: 8548829333112451455}
-  BubbleBullet: {fileID: 3479750909645620935, guid: 59d18f8b57b61394b8c9a95913b519ba, type: 3}
+  BubbleBullet: {fileID: 7790543410762780666, guid: 67ee660c6e29d5146acd8980eeeea88e, type: 3}
   BulletSpeed: 10
   CDistance: 0.1
 --- !u!61 &5467147670688783118
@@ -280,7 +280,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07, y: 4.7}
+  m_Offset: {x: 0.06999993, y: 5.168613}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.28866667}
@@ -291,7 +291,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.9, y: 10}
+  m_Size: {x: 5.9, y: 9.062774}
   m_EdgeRadius: 0
 --- !u!1 &7933068014945672105
 GameObject:

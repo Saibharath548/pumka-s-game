@@ -14,6 +14,7 @@ public class MoveT : MonoBehaviour
 
     private float xInput;
     [SerializeField] private float speed;
+    public static bool Harden = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,10 +37,6 @@ public class MoveT : MonoBehaviour
         if (collision.CompareTag("spike"))
         {
             Destroy(this.gameObject);
-        }
-        if (collision.CompareTag("bullet"))
-        {
-            Destroy(collision.gameObject);
         }
     }
     

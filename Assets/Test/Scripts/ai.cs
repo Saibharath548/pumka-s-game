@@ -35,18 +35,12 @@ public class ai : MonoBehaviour
             pR = true;
         }
     }
-    private void OnTriggerStay2D(Collider2D Collision)
-    {
-        if (Collision.CompareTag("Player"))
-        {
-            pR = true;
-        }
-    }
+ 
 
     private void aiMove()
     {
 
-        Vector3 direction = MoveT.instance.transform.position - T.position;
+        direction = MoveT.instance.transform.position - T.position;
 
         T.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg));
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -65,7 +59,7 @@ public class ai : MonoBehaviour
 
         BB.GetComponent<Rigidbody2D>().velocity = direction.normalized * BulletSpeed;
 
-        Destroy(BB, 7);
+        Destroy(BB, 5);
         shoot = true;
     }
     //private void OnTriggerStay2D(Collider2D collision)
@@ -83,7 +77,7 @@ public class ai : MonoBehaviour
     //}
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("player"))
+        if (other.CompareTag("Player"))
         {
             pR = false;
         }
