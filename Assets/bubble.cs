@@ -10,10 +10,12 @@ public class bubble : MonoBehaviour
     public GameObject BG;
     bool inC;
     public static bool Move;
+    public static bubble instance;
     public Animator Ani;
     // Start is called before the first frame update
     private void Awake()
     {
+        instance = this;
         Ani = GetComponent<Animator>();
         //rb2 = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
     }
@@ -53,5 +55,9 @@ public class bubble : MonoBehaviour
             Ani.SetTrigger("Break");
             Destroy(this, 1);
         }
+    }
+    private void getBool()
+    {
+
     }
 }

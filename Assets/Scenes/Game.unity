@@ -1170,6 +1170,7 @@ MonoBehaviour:
   ScoreUI: {fileID: 669465896}
   Player: {fileID: 1838206493}
   P: {fileID: 1745764786}
+  Score: {fileID: 694983302}
 --- !u!212 &1312641185
 SpriteRenderer:
   m_ObjectHideFlags: 0

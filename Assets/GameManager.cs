@@ -1,5 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Video;
 
@@ -9,7 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject ScoreUI;
     public VideoPlayer Player;
     public GameObject P;
-    private float Score = 0;
+    private int Score ;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +22,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        while (bubble.Move)
+        if (bubble.Move)
         {
-            Score += 1 * Time.time;
+            Score += (int)Time.time;
             Debug.Log(Score);
         }
     }
