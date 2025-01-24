@@ -5,7 +5,7 @@ using UnityEngine;
 public class spawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] Platforms;
-    [SerializeField] private float PlatSpawnTimer = 1f;
+    //[SerializeField] private float PlatSpawnTimer = 1f;
 
     // Start is called before the first frame update
     void Start()

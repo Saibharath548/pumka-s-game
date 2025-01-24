@@ -49,6 +49,12 @@ public class movement : MonoBehaviour
         {
             SR.flipX = false;
         }
+
+        if (GameManager.Broke)
+        {
+            Ani.SetBool("Broke", true);
+            rb.gravityScale = .5f;   
+        }
     }
 
     private void FixedUpdate()
