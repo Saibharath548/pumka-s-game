@@ -6067,7 +6067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &669465897
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6334,7 +6334,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.999994, y: 167}
+  m_AnchoredPosition: {x: -19.999994, y: 198}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &694983302
@@ -6359,15 +6359,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0000000
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5d24bb18feb757040b9435315e0c8e83, type: 2}
-  m_sharedMaterial: {fileID: -7957381961304131270, guid: 5d24bb18feb757040b9435315e0c8e83, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9dc52cd43110f0a4ea0a71b0b3e29bf7, type: 2}
+  m_sharedMaterial: {fileID: 3784069035137626019, guid: 9dc52cd43110f0a4ea0a71b0b3e29bf7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8776,15 +8776,15 @@ MonoBehaviour:
 
     Tap To Menu'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5d24bb18feb757040b9435315e0c8e83, type: 2}
-  m_sharedMaterial: {fileID: -7957381961304131270, guid: 5d24bb18feb757040b9435315e0c8e83, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9dc52cd43110f0a4ea0a71b0b3e29bf7, type: 2}
+  m_sharedMaterial: {fileID: 3784069035137626019, guid: 9dc52cd43110f0a4ea0a71b0b3e29bf7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
