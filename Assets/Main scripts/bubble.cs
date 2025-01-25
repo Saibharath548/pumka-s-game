@@ -9,6 +9,7 @@ public class bubble : MonoBehaviour
     public CircleCollider2D Bubble;
     public GameObject BG;
     bool inC;
+    public AudioSource PowerUP;
     public static bool Move;
     public Animator Ani;
     public static int Fuel = 1;
@@ -138,6 +139,7 @@ public class bubble : MonoBehaviour
         }
         if (collision.CompareTag("Super"))
         {
+            PowerUP.Play();
             Super = true;
             Destroy(collision.gameObject);
         }
