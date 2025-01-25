@@ -34,6 +34,7 @@ public class bubble : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(Move);
         if (Fuel < 0)
         {
             Move = false;
