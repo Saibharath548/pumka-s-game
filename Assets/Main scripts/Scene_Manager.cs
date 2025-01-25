@@ -33,7 +33,7 @@ public class Scene_Manager : MonoBehaviour
     void Update()
     {
         scene = SceneManager.GetActiveScene().name;
-        Debug.Log(scene);
+        //Debug.Log(scene);
         if (scene == "Menu" && Input.GetMouseButtonDown(0))
         {
             AS.Play();
@@ -43,9 +43,7 @@ public class Scene_Manager : MonoBehaviour
         {
             if (count == 0)
             {
-                AS.Play();
-                Ani.SetTrigger("All");
-                count = 1;
+                StartCoroutine(Change());                   
             }
             else if (count == 1 && Input.GetMouseButtonDown(0))
             {
@@ -54,7 +52,7 @@ public class Scene_Manager : MonoBehaviour
                 count = 0;
             }
         }
-        Debug.Log(count);
+        //Debug.Log(count);
     }
     public void LoadGame(string Level)
     {
@@ -66,9 +64,9 @@ public class Scene_Manager : MonoBehaviour
     }
     IEnumerator Change()
     {
-        yield return new WaitForSeconds(15);
+        count = 1;
+        yield return new WaitForSeconds(2);
         AS.Play();
         Ani.SetTrigger("All");
-        count = 1;
     }
 }

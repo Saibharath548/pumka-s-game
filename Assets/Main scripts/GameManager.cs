@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
             Set[2].SetActive(true);
             Score += ((int)Time.time) / 2;
             ScoreO.text = Score.ToString();
-            Debug.Log(Score);
+            //Debug.Log(Score);
             healthUI();
         }
         UI.text = bubble.Hard.ToString();
