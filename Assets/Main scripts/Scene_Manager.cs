@@ -39,7 +39,7 @@ public class Scene_Manager : MonoBehaviour
             AS.Play();
             Ani.SetTrigger("Game");
         }
-        if (scene == "Game" && Input.GetMouseButtonDown(0) && GameManager.Broke)
+        if (scene == "Game" && GameManager.Broke)
         {
             if (count == 0)
             {
@@ -47,7 +47,7 @@ public class Scene_Manager : MonoBehaviour
                 Ani.SetTrigger("All");
                 count = 1;
             }
-            else if (count == 1)
+            else if (count == 1 && Input.GetMouseButtonDown(0))
             {
                 AS.Play();
                 Ani.SetTrigger("Menu");
@@ -63,5 +63,12 @@ public class Scene_Manager : MonoBehaviour
     public void ScoreUI()
     {
         GM.ShowUI();
+    }
+    IEnumerator Change()
+    {
+        yield return new WaitForSeconds(15);
+        AS.Play();
+        Ani.SetTrigger("All");
+        count = 1;
     }
 }

@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
             Debug.Log(Score);
             healthUI();
         }
-        UI.text = (bubble.Fuel.ToString() + "\n" + "  " + bubble.Hard.ToString());
+        UI.text = bubble.Hard.ToString();
     }
 
     public void healthUI()
