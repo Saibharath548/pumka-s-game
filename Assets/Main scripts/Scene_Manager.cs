@@ -17,7 +17,7 @@ public class Scene_Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GM = FindObjectOfType<GameManager>();
+        GM = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();
         AS = GetComponent<AudioSource>();
         Ani = GetComponent<Animator>();
         if (instance && instance != this)

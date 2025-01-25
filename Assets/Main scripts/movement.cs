@@ -22,6 +22,7 @@ public class movement : MonoBehaviour
         PlayerPos = GetComponent<Transform>();
         instance = this;
         Ani = GetComponent<Animator>();
+        Ani.SetBool("Broke", false);
         SR = GetComponent<SpriteRenderer>();
     }
     private void OnEnable()

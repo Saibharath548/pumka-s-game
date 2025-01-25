@@ -20,7 +20,7 @@ public class Water : MonoBehaviour
         {
             if(!onPos)
             {
-                WaterPos.position += new Vector3(0, 1, 0) * Time.deltaTime;
+                WaterPos.position += new Vector3(0, .5f, 0) * Time.deltaTime;
             }
         }
     }

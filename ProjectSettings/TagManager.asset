@@ -15,6 +15,7 @@ TagManager:
   - Clone
   - Bullet
   - water
+  - GM
   layers:
   - Default
   - TransparentFX
