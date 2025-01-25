@@ -17,6 +17,7 @@ public class bubble : MonoBehaviour
     private bool HardMode = false;
     private bool Super = false;
     public GameObject BubblePS;
+    private bool FuelCheck = true;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -56,7 +57,11 @@ public class bubble : MonoBehaviour
             //transform.position += new Vector3(0, 1, 0) * Time.deltaTime;
             //transform.localScale -= new Vector3(.1f, .1f, 0) * Time.deltaTime;
             transform.position = Player.transform.position;
-            StartCoroutine(FuelTimer());
+            if (Fuel >= 0 && FuelCheck)
+            {
+                FuelCheck = false;
+                StartCoroutine(FuelTimer());
+            }
         }
         if (Super)
         {
@@ -140,10 +145,8 @@ public class bubble : MonoBehaviour
     IEnumerator FuelTimer()
     {
         yield return new WaitForSeconds(30);
-        if (Fuel >= 0)
-        {
-            Fuel--;
-        }
+        FuelCheck = true;
+        Fuel--;
     }
     IEnumerator HardTimer()
     {
