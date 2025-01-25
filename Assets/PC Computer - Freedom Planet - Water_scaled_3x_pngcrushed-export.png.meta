@@ -1,0 +1,550 @@
+fileFormatVersion: 2
+guid: 480b0615bce2c024aa480f734ef2209f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_0
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1668
+        width: 1537
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72dc1385a2d24d241bd210b52ac2896c
+      internalID: 1804877982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1575
+        width: 1536
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6d0d97441e9d945a03eb9e95d3c6f1
+      internalID: -1719342280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1482
+        width: 1536
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90711b20651100340acf52576ccda045
+      internalID: -1920928643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1389
+        width: 1536
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aed5b018061d5045bc55b5bf5d2351d
+      internalID: -261793556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_4
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1296
+        width: 1536
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de733d00a881bb2438ba8ee44b152b6a
+      internalID: 993401184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_5
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1203
+        width: 1536
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c912f87023c4b241afab8c2fcd34cd4
+      internalID: 197861385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_6
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1110
+        width: 1536
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b76e6aab0c6013540b431c36962d7a07
+      internalID: 2076541838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_7
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1017
+        width: 1536
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaf0e1410680ecd449aeac6e5eb6da5c
+      internalID: 870282311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_8
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 819
+        width: 126
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b067ab6f2d7c66a43b28d87abbd03f8d
+      internalID: -1658661319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_9
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 819
+        width: 132
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b5fcfe4dc5c5fd43b3028ff0340b2b2
+      internalID: 1907123415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_15
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 819
+        width: 114
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4778312432751d469b5c966dc00ed5c
+      internalID: -784597231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_10
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 819
+        width: 136
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a77ff0fc645ab9e4e9bcdda6b1edbd02
+      internalID: -1865705943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_11
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 818
+        width: 126
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a5e05f3a4bfc5a4597f45e1df835c90
+      internalID: -2010220918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_12
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 819
+        width: 126
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d26fd5d3259994a808aaa2287fbe5b
+      internalID: -1270266775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_13
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 819
+        width: 108
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bb2d37b8c3c7704d927b7bfb69ad5e8
+      internalID: 1158520940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_14
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 819
+        width: 57
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 031bc2cdaf9c35f4da59cc254358d9eb
+      internalID: 85152087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_16
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 819
+        width: 9
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102656846e01c8f42a8be3fce18afa66
+      internalID: -2017354889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_0: 1804877982
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_1: -1719342280
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_10: -1865705943
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_11: -2010220918
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_12: -1270266775
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_13: 1158520940
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_14: 85152087
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_15: -784597231
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_16: -2017354889
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_17: 1341204473
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_18: -1534704117
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_19: -1590327696
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_2: -1920928643
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_20: -243245046
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_21: -1895463196
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_22: 2087847676
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_23: 1660510161
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_24: -1188737996
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_25: -1646258951
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_26: -690316288
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_27: -1324216382
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_28: 236328425
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_29: -1420656014
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_3: -261793556
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_30: -1828508159
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_31: -2145170625
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_32: -1710033614
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_33: 1937171261
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_34: -334325760
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_35: 2019731410
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_36: -1740831206
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_37: -13896619
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_38: -292787847
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_39: -907922167
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_4: 993401184
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_5: 197861385
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_6: 2076541838
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_7: 870282311
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_8: -1658661319
+      PC Computer - Freedom Planet - Water_scaled_3x_pngcrushed-export_9: 1907123415
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
