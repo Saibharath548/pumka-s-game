@@ -14,6 +14,7 @@ TagManager:
   - Super
   - Clone
   - Bullet
+  - water
   layers:
   - Default
   - TransparentFX
