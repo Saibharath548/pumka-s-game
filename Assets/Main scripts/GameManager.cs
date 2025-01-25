@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] Set;
     public VideoPlayer Player;
     public GameObject P;
-    private float health = 30;
+    [SerializeField]private float health = 30;
     private int Score ;
     public TextMeshProUGUI ScoreO;
     public TextMeshProUGUI UI;
@@ -52,8 +52,7 @@ public class GameManager : MonoBehaviour
         if(CollectedH)
         {
             health = 30;
-            health -= Time.deltaTime;
-            Slider1.value = health;
+            CollectedH = false;
         }
     }
 
