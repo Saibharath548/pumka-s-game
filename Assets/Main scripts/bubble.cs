@@ -40,7 +40,7 @@ public class bubble : MonoBehaviour
             GameManager.Broke = true;
             Ani.SetTrigger("Break");
         }
-        if (Input.GetKeyDown(KeyCode.Mouse1) && Hard > 0)
+        if (Input.GetKeyDown(KeyCode.Mouse1) && Hard > 0 && !HardMode)
         {
             StartCoroutine(HardTimer());
         }

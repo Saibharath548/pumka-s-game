@@ -704,19 +704,19 @@ PrefabInstance:
       objectReference: {fileID: -1193325944, guid: 7d91f7c3f40cc644d9e521076def27bd, type: 3}
     - target: {fileID: 6359237622725470368, guid: e31057a7586f3f6418c4f0cbc156a694, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0.5019608
       objectReference: {fileID: 0}
     - target: {fileID: 6359237622725470368, guid: e31057a7586f3f6418c4f0cbc156a694, type: 3}
       propertyPath: m_Color.b
-      value: 0.8980393
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6359237622725470368, guid: e31057a7586f3f6418c4f0cbc156a694, type: 3}
       propertyPath: m_Color.g
-      value: 0.8352942
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6359237622725470368, guid: e31057a7586f3f6418c4f0cbc156a694, type: 3}
       propertyPath: m_Color.r
-      value: 0.6156863
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6359237622725470368, guid: e31057a7586f3f6418c4f0cbc156a694, type: 3}
       propertyPath: m_WasSpriteAssigned
@@ -1182,7 +1182,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
