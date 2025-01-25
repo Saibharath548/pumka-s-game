@@ -73,13 +73,13 @@ public class bubble : MonoBehaviour
     }
     IEnumerator speedup()
     {
-
+        Ani.SetBool("Super", true);
         Bubble.enabled = false;
         Time.timeScale = 5;
         //spawnerT.obstacleSpeed = 5;
         //cloud.Speed = cloud.Speed * 5;
         yield return new WaitForSeconds(15);
-
+        Ani.SetBool("Super", false);
         Time.timeScale = 1;
         //spawnerT.obstacleSpeed = 1;
         //cloud.Speed /= 5;
