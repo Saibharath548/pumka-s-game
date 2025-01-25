@@ -10,7 +10,6 @@ public class bubble : MonoBehaviour
     public GameObject BG;
     bool inC;
     public static bool Move;
-    public static bubble instance;
     public Animator Ani;
     public static int Fuel = 1;
     public static int Hard = 3;
@@ -22,7 +21,6 @@ public class bubble : MonoBehaviour
     private void Awake()
     {
         Bubble = GetComponent<CircleCollider2D>();
-        instance = this;
         Ani = GetComponent<Animator>();
         //rb2 = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
     }
