@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class bubble : MonoBehaviour
@@ -17,6 +16,7 @@ public class bubble : MonoBehaviour
     public static int Hard = 3;
     private bool HardMode = false;
     private bool Super = false;
+    public GameObject BubblePS;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -33,7 +33,7 @@ public class bubble : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Fuel < 0)
+        if (Fuel < 0)
         {
             Move = false;
             GameManager.Broke = true;
@@ -61,17 +61,28 @@ public class bubble : MonoBehaviour
         if (Super)
         {
             StartCoroutine(speedup());
+            StartCoroutine(BubbleParticle());
         }
+    }
+    IEnumerator BubbleParticle()
+    {
+        BubblePS.SetActive(true);
+        yield return new WaitForSeconds(15);
+        BubblePS.SetActive(false);
+
     }
     IEnumerator speedup()
     {
 
         Bubble.enabled = false;
-        spawnerT.obstacleSpeed = 5;
-        cloud.Speed = cloud.Speed * 5;
-        yield return new WaitForSeconds(5);
-        spawnerT.obstacleSpeed = 1;
-        cloud.Speed /= 5;
+        Time.timeScale = 5;
+        //spawnerT.obstacleSpeed = 5;
+        //cloud.Speed = cloud.Speed * 5;
+        yield return new WaitForSeconds(15);
+
+        Time.timeScale = 1;
+        //spawnerT.obstacleSpeed = 1;
+        //cloud.Speed /= 5;
         Bubble.enabled = true;
         Super = false;
     }
@@ -114,7 +125,7 @@ public class bubble : MonoBehaviour
         }
         else if (collision.CompareTag("hard"))
         {
-            if(Hard <= 2)
+            if (Hard <= 2)
             {
                 Destroy(collision.gameObject);
                 Hard++;
@@ -129,7 +140,7 @@ public class bubble : MonoBehaviour
     IEnumerator FuelTimer()
     {
         yield return new WaitForSeconds(30);
-        if(Fuel >= 0)
+        if (Fuel >= 0)
         {
             Fuel--;
         }
