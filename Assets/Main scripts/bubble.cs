@@ -125,6 +125,7 @@ public class bubble : MonoBehaviour
         }
         else if (collision.CompareTag("Fuel"))
         {
+            GameManager.CollectedH = true;
             Destroy(collision.gameObject);
             Fuel++;
         }
