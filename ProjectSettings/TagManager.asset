@@ -16,6 +16,8 @@ TagManager:
   - Bullet
   - water
   - GM
+  - Score
+  - Button
   layers:
   - Default
   - TransparentFX
