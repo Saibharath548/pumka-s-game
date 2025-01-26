@@ -25,7 +25,6 @@ public class GameManager : MonoBehaviour
     {
         Broke = false;
         ScoreUI.SetActive(false);
-        StartCoroutine(Spwan());
     }
 
     // Update is called once per frame
@@ -42,6 +41,10 @@ public class GameManager : MonoBehaviour
             healthUI();
         }
         UI.text = bubble.Hard.ToString();
+        if (Scene_Manager.ChangeCheck)
+        {
+            StartCoroutine(Spwan());
+        }
     }
 
     public void healthUI()
@@ -66,7 +69,8 @@ public class GameManager : MonoBehaviour
 
     IEnumerator Spwan()
     {
-        yield return new WaitForSeconds(.75f);
+        yield return new WaitForSeconds(1.25f);
         P.SetActive(true);
+        movement.MoveP = true;
     }
 }

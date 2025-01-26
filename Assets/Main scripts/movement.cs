@@ -12,6 +12,7 @@ public class movement : MonoBehaviour
     private SpriteRenderer SR;
     [SerializeField]private float speed;
     Vector2 moveDirection = Vector2.zero;
+    public static bool MoveP;
 
     public static movement instance;
 
@@ -19,6 +20,7 @@ public class movement : MonoBehaviour
 
     private void Awake()
     {
+        MoveP = false;
         PlayerPos = GetComponent<Transform>();
         instance = this;
         Ani = GetComponent<Animator>();
@@ -42,7 +44,10 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveDirection = Playercon.ReadValue<Vector2>();
+        if (MoveP)
+        {
+            moveDirection = Playercon.ReadValue<Vector2>();
+        }
         Ani.SetFloat("Movement", moveDirection.sqrMagnitude);
         if (moveDirection.x > 0)
         {

@@ -14,17 +14,14 @@ public class Scene_Manager : MonoBehaviour
     public string scene;
     public AudioSource AS;
     public GameManager GM;
-    public static bool ChangeCheck = true;
-    public Button Menu;
+    public static bool ChangeCheck = false;
+    public GameObject TapAgain;
 
     // Start is called before the first frame update
     void Start()
     {
-        Menu = GameObject.Find("Button").GetComponent<Button>();
-        Menu.onClick.AddListener(ScoreB);
-        GM = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();
-        AS = GetComponent<AudioSource>();
         Ani = GetComponent<Animator>();
+        AS = GetComponent<AudioSource>();
         if (instance && instance != this)
         {
             Destroy(gameObject);
@@ -38,39 +35,50 @@ public class Scene_Manager : MonoBehaviour
     void Update()
     {
         scene = SceneManager.GetActiveScene().name;
-        //Debug.Log(scene);
+        if (scene != "Menu")
+        {
+            if (TapAgain == null)
+            {
+                TapAgain = GameObject.Find("TapAgain");
+                TapAgain.SetActive(false);
+            }
+            GM = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();
+        }
         if (scene == "Menu" && Input.GetMouseButtonDown(0))
         {
+            ChangeCheck = true;
             AS.Play();
             Ani.SetTrigger("Game");
         }
-        if (scene == "Game" && GameManager.Broke && !ChangeCheck)
+        else if (scene == "Game" && GameManager.Broke && ChangeCheck)
         {
-            StartCoroutine(Change());
+            StartCoroutine(Change(2));
         }
-    }
-    public void ScoreB()
-    {
-        if (scene == "Game" && GameManager.Broke && ChangeCheck)
+        else if (scene == "Game" && GameManager.Broke && !ChangeCheck && Input.GetMouseButtonDown(0))
         {
-            ChangeCheck = false;
             AS.Play();
             Ani.SetTrigger("Menu");
         }
     }
-    
-    public void LoadGame(string Level)
+    public void WhichMenu(int num)
     {
-        SceneManager.LoadScene(Level);
+        switch (num)
+        {
+            case 1:SceneManager.LoadScene("Game");
+                break;
+            case 2:
+                SceneManager.LoadScene("Menu");
+                break;
+            case 3:TapAgain.SetActive(true);
+                   GM.ShowUI();
+                break;
+        }
     }
-    public void ScoreUI()
+    IEnumerator Change(float Time)
     {
-        GM.ShowUI();
-    }
-    IEnumerator Change()
-    {
-        ChangeCheck = true;
-        yield return new WaitForSeconds(3);
+        movement.MoveP = false;
+        ChangeCheck = false;
+        yield return new WaitForSeconds(Time);
         AS.Play();
         Ani.SetTrigger("All");
     }
