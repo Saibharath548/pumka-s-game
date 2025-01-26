@@ -39,7 +39,7 @@ public class Scene_Manager : MonoBehaviour
         {
             if (TapAgain == null)
             {
-                TapAgain = GameObject.Find("TapAgain");
+                TapAgain = GameObject.Find("TapToPlayAgain");
                 TapAgain.SetActive(false);
             }
             GM = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();

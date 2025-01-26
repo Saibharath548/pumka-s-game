@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
@@ -18,11 +19,15 @@ public class GameManager : MonoBehaviour
     private int Score ;
     public TextMeshProUGUI ScoreO;
     public TextMeshProUGUI UI;
+    private float elapsedTime;
     public Slider Slider1;
     public static bool CollectedH;
     // Start is called before the first frame update
     void Start()
     {
+        elapsedTime = 0f;
+        Score = 0;
+        ScoreO.text = Score.ToString();
         Broke = false;
         ScoreUI.SetActive(false);
     }
@@ -35,10 +40,15 @@ public class GameManager : MonoBehaviour
             Set[0].SetActive(true);
             Set[1].SetActive(true);
             Set[2].SetActive(true);
-            Score += ((int)Time.time) / 2;
+            elapsedTime += Time.deltaTime;
+            Score = (int)(elapsedTime * 100);
             ScoreO.text = Score.ToString();
             //Debug.Log(Score);
             healthUI();
+        }
+        if (Broke)
+        {
+            Score = 0;
         }
         UI.text = bubble.Hard.ToString();
         if (Scene_Manager.ChangeCheck)
@@ -63,7 +73,6 @@ public class GameManager : MonoBehaviour
 
     public void ShowUI()
     {
-        Player.Play();
         ScoreUI.SetActive(true);
     }
 
