@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using UnityEngine.XR;
 
 public class GameManager : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        bubble.Hard = 3;
         elapsedTime = 0f;
         Score = 0;
         ScoreO.text = Score.ToString();

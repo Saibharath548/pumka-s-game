@@ -18,6 +18,7 @@ TagManager:
   - GM
   - Score
   - Button
+  - Joy
   layers:
   - Default
   - TransparentFX

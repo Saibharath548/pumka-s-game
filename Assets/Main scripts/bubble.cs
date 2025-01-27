@@ -39,10 +39,6 @@ public class bubble : MonoBehaviour
             GameManager.Broke = true;
             Ani.SetTrigger("Break");
         }
-        if (Input.GetKeyDown(KeyCode.Mouse1) && Hard > 0 && !HardMode)
-        {
-            StartCoroutine(HardTimer());
-        }
         if (HardMode && Move)
         {
             Ani.SetBool("Hard", true);
@@ -66,6 +62,13 @@ public class bubble : MonoBehaviour
         {
             StartCoroutine(speedup());
             StartCoroutine(BubbleParticle());
+        }
+    }
+    public void HardButton()
+    {
+        if (Move && Hard > 0 && !HardMode)
+        {
+            StartCoroutine(HardTimer());
         }
     }
     IEnumerator BubbleParticle()
@@ -152,8 +155,8 @@ public class bubble : MonoBehaviour
     IEnumerator HardTimer()
     {
         HardMode = true;
-        yield return new WaitForSeconds(5);
         Hard--;
+        yield return new WaitForSeconds(5);
         HardMode = false;
     }
     public void Des()

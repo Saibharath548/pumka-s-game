@@ -15,11 +15,13 @@ public class movement : MonoBehaviour
     public static bool MoveP;
 
     public static movement instance;
+    public Joystick JPlayer;
 
     private Transform T;
 
     private void Awake()
     {
+        JPlayer = GameObject.FindGameObjectWithTag("Joy").GetComponent<Joystick>();
         MoveP = false;
         PlayerPos = GetComponent<Transform>();
         instance = this;
@@ -48,12 +50,12 @@ public class movement : MonoBehaviour
         {
             moveDirection = Playercon.ReadValue<Vector2>();
         }
-        Ani.SetFloat("Movement", moveDirection.sqrMagnitude);
-        if (moveDirection.x > 0)
+        Ani.SetFloat("Movement", JPlayer.Direction.sqrMagnitude);
+        if (JPlayer.Direction.x > 0)
         {
             SR.flipX = true;
         }
-        else if (moveDirection.x < 0)
+        else if (JPlayer.Direction.x < 0)
         {
             SR.flipX = false;
         }
@@ -70,11 +72,13 @@ public class movement : MonoBehaviour
     {
         if (bubble.Move)
         {
-            rb.velocity = new Vector2(moveDirection.x * speed, moveDirection.y * speed);
+            rb.velocity = new Vector2(JPlayer.Direction.x * speed, JPlayer.Direction.y * speed);
+            //rb.velocity = new Vector2(moveDirection.x * speed, moveDirection.y * speed);
         }
         else
         {
-            rb.velocity = new Vector2(moveDirection.x * speed, rb.velocity.y);
+            rb.velocity = new Vector2(JPlayer.Direction.x * speed, rb.velocity.y);
+            //rb.velocity = Vector2.zero;
         }
         
     }
